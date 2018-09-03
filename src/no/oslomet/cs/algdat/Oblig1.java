@@ -93,21 +93,28 @@ public class Oblig1 {
 
     public static int antallUlikeSortert(int a[]){
 
+        /*
         if(isSorted(a)){
             throw new IllegalStateException("Arrayen er ikke sortert");
+        }*/
+
+        int forskjelligeTall = 1;
+
+        if(a.length == 0){
+            forskjelligeTall = 0;
         }
-
-
-        int forskjelligeTall = 0;
-        for(int i = 0; i < a.length-1; i++){
-            if(a[i] < a[i+1]){
-                forskjelligeTall++;
+        else{
+            for(int i = 0; i < a.length-1; i++){
+                if(a[i] < a[i+1]){
+                    forskjelligeTall++;
+                }
             }
         }
+
         return forskjelligeTall;
     }
 
-
+/*
     public static boolean isSorted(int[] a){
 
         for(int i=0; i<a.length-1; i++){
@@ -117,6 +124,5 @@ public class Oblig1 {
             }
         }
         return true;
-    }
-
+    }*/
 }
