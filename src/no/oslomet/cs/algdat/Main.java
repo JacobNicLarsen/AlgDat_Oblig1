@@ -6,10 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] b = Oblig1.randPerm(2000000);
-        int Ombyttinger = Oblig1.ombyttninger(b);
+        int[] b = new int[12];
+        int[] c = {1,2,3,4,5};
+        int tall = Oblig1.antallUlikeSortert(b);
 
-        System.out.println(Ombyttinger);
+        System.out.println(tall);
 
     }
 }
