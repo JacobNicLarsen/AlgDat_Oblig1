@@ -93,10 +93,10 @@ public class Oblig1 {
 
     public static int antallUlikeSortert(int a[]){
 
-        /*
-        if(isSorted(a)){
+
+        if(!isSorted(a)){
             throw new IllegalStateException("Arrayen er ikke sortert");
-        }*/
+        }
 
         int forskjelligeTall = 1;
 
@@ -114,15 +114,24 @@ public class Oblig1 {
         return forskjelligeTall;
     }
 
-/*
+
+    /**
+     * Tester om en Array er sortert og retunerer true om den ikke er sortert
+     * @param a Array
+     * @return om arrayen er sortert eller ikke
+     */
     public static boolean isSorted(int[] a){
+
+        if(a.length == 0){
+            return true;
+        }
 
         for(int i=0; i<a.length-1; i++){
 
-            if(a[i] < a[i+1]){
+            if(a[i] > a[i+1]){
                 return false;
             }
         }
         return true;
-    }*/
+    }
 }
