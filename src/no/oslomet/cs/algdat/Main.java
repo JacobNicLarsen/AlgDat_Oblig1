@@ -6,12 +6,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] b = new int[0];
+        int[] b = Oblig1.randPerm(2000000);
+        int Ombyttinger = Oblig1.ombyttninger(b);
 
-        int maks = Oblig1.max(b);
-
-        System.out.println(maks);
-        System.out.println(Arrays.toString(b));
+        System.out.println(Ombyttinger);
 
     }
 }

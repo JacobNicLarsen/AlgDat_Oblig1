@@ -31,7 +31,25 @@ public class Oblig1 {
     }
     //Det blir flest ombyttinger om tabellen er sortert descending / Synkene
     //Det blir faerrest ombyttinger om tabellen er sortert ascending/ Stigene
-    //I snitt blir det Log(n) + 0.577 ombyttninger, det gunstige tallet
+    //I snitt blir ca n ombyttning i Big O notasjon som jeg fant ut etter aa kjoert Ombyttinger metoden
+
+    public static int ombyttninger(int[] a){
+        if (a.length == 0){
+            throw new NoSuchElementException("Tom Array");
+        }
+        int antBytt = 0;
+
+        for(int i = 0; i < a.length - 1; i++){
+
+            if(a[i] > a[i+1]){
+                bytt(a,i,i+1);
+                antBytt++;
+            }
+
+        }
+        return antBytt;
+
+    }
 
     /**
      * Bytter 2 tall i en array basert på index
@@ -49,7 +67,7 @@ public class Oblig1 {
     /**
      * lager en tilfeldig perumert Array
      * @param n Antall verdier i tabellen
-     * @return
+     * @return tilfeldig peramert array
      */
     public static int[] randPerm(int n)  // en effektiv versjon
     {
