@@ -141,9 +141,9 @@ public class Oblig1 {
      */
     public static int antallUlikeUsortert(int[] a){
         if(a.length == 0) return 0;
-        int forskjelligeTall = 0;
+        int forskjelligeTall = 0; //antall forskjellige tall
 
-        for(int i = 0; i < a.length; i++){
+        for(int i = 0; i < a.length; i++){ //Looper gjennom og sjekker om tallet har vært tidligere i tabellen
 
             if(!test_unik(a,i)){
             }
@@ -160,14 +160,20 @@ public class Oblig1 {
      * Tester et tall er unikt i en array basert på indeksen til tallet
      * @param a Array
      * @param index int index
-     * @return om tallet i indeken er unik 
+     * @return om tallet i indeken er unik
      */
-    public static boolean test_unik(int a[], int index){
+    public static boolean test_unik(int a[], int index){ // Tester om tallet har vært tidligere i tabellen
         for(int i = index - 1; i >= 0; i--){
             if(a[index] == a[i]){
                 return false;
             }
         }
        return true;
+    }
+
+
+    public static void delsortering(int[] a){
+        
+
     }
 }
