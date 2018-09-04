@@ -91,6 +91,7 @@ public class Oblig1 {
         return a;                        // permutasjonen returneres
     }
 
+    //Oppgave 2
     public static int antallUlikeSortert(int a[]){
 
 
@@ -122,10 +123,6 @@ public class Oblig1 {
      */
     public static boolean isSorted(int[] a){
 
-        if(a.length == 0){
-            return true;
-        }
-
         for(int i=0; i<a.length-1; i++){
 
             if(a[i] > a[i+1]){
@@ -133,5 +130,44 @@ public class Oblig1 {
             }
         }
         return true;
+    }
+
+    //Oppgave 3
+
+    /**
+     * Finner antall unike tall i en usortert Array
+     * @param a Array
+     * @return Antall unike tall
+     */
+    public static int antallUlikeUsortert(int[] a){
+        if(a.length == 0) return 0;
+        int forskjelligeTall = 0;
+
+        for(int i = 0; i < a.length; i++){
+
+            if(!test_unik(a,i)){
+            }
+            else{
+                forskjelligeTall++;
+            }
+
+        }
+        return forskjelligeTall;
+    }
+
+
+    /**
+     * Tester et tall er unikt i en array basert på indeksen til tallet
+     * @param a Array
+     * @param index int index
+     * @return om tallet i indeken er unik 
+     */
+    public static boolean test_unik(int a[], int index){
+        for(int i = index - 1; i >= 0; i--){
+            if(a[index] == a[i]){
+                return false;
+            }
+        }
+       return true;
     }
 }

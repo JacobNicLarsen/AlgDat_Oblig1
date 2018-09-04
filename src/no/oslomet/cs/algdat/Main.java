@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
 
         int[] b = new int[0];
-        int[] c = {1,3,3,4,5};
-        int tall = Oblig1.antallUlikeSortert(b);
+        int[] c = { 5, 3, 7, 4, 3, 5, 7, 8, 6, 7};
+        int tall = Oblig1.antallUlikeUsortert(c);
 
         System.out.println(tall);
 
