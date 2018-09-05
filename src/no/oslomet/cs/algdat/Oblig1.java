@@ -174,19 +174,37 @@ public class Oblig1 {
 
     public static void delsortering(int[] a){
 
-        for(int i = 0; i <a.length -1; i++){
-            if(a[i] > a[i+1] && a[i]%2==0){
-                bytt(a, i,i+1);
+        for(int i = 0; i < a.length -1; i++){
+            //if(a[i]%2 == 0){
+                bobbleright(a);
+            System.out.println(Arrays.toString(a));
+            //}
+            /*
+            if(a[i]%2 == 1){
+                bobbleleft(a);
             }
+            */
         }
+
 
     }
 
-    public static void boble(int[] a){
+    public static void bobbleright(int[] a){
 
 
-        for(int i = 0; i<a.length; i++){
-            if()
+        for(int i = 0; i <a.length - 1; i++){
+            if(a[i] > a[i+1]) {
+                //System.out.println(a[i] + " Større enn " + a[i+1]);
+                bytt(a, i, i + 1);
+            }
+        }
+    }
+    public static void bobbleleft(int[] a){
+        for(int i = a.length -1; i <0; i--){
+            if(a[i] < a[i-1]) {
+                System.out.println(a[i] + " Større enn " + a[i+1]);
+                bytt(a, i, i -1);
+            }
         }
     }
 }

@@ -8,9 +8,10 @@ public class Main {
 
         int[] b = new int[0];
         int[] c = { 5, 3, 7, 4, 3, 5, 7, 8, 6, 7};
-        int tall = Oblig1.antallUlikeUsortert(c);
+        Oblig1.delsortering(c);
 
-        System.out.println(tall);
+
+        System.out.println(Arrays.toString(c));
 
     }
 }
