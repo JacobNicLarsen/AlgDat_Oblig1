@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         int[] b = new int[0];
-        int[] c = { 5, 3, 7, 4, 3, 5, 7, 8, 6, 7};
+        int[] c = { 5, 3, 7, 4, 3, 5, 7, 8, 6, 7,1,2,4,5};
         Oblig1.delsortering(c);
 
 

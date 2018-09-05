@@ -175,15 +175,15 @@ public class Oblig1 {
     public static void delsortering(int[] a){
 
         for(int i = 0; i < a.length -1; i++){
-            //if(a[i]%2 == 0){
+            if(a[i]%2 == 0){
                 bobbleright(a);
             System.out.println(Arrays.toString(a));
-            //}
+            }
             /*
             if(a[i]%2 == 1){
                 bobbleleft(a);
-            }
-            */
+            }*/
+
         }
 
 
@@ -194,7 +194,6 @@ public class Oblig1 {
 
         for(int i = 0; i <a.length - 1; i++){
             if(a[i] > a[i+1]) {
-                //System.out.println(a[i] + " Større enn " + a[i+1]);
                 bytt(a, i, i + 1);
             }
         }
