@@ -173,7 +173,20 @@ public class Oblig1 {
 
 
     public static void delsortering(int[] a){
-        
 
+        for(int i = 0; i <a.length -1; i++){
+            if(a[i] > a[i+1] && a[i]%2==0){
+                bytt(a, i,i+1);
+            }
+        }
+
+    }
+
+    public static void boble(int[] a){
+
+
+        for(int i = 0; i<a.length; i++){
+            if()
+        }
     }
 }
