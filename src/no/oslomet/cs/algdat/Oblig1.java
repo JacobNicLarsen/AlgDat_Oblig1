@@ -216,4 +216,31 @@ public class Oblig1 {
         a[i] = temp;
 
     }
+
+
+    public static void rotasjon(char[] a, int k){
+
+        if(k>0){
+            for (int i = 0; i < k; i++)
+                rotasjon(a);
+        }
+        else if(k == 0){
+            //Ingen rotasjon
+        }
+        else if(k < 0){
+
+            for(int j = 0; j>k;j--){
+
+                char temp = a[0];
+                int i;
+
+                for(i = 0; i < a.length - 1; i++){
+                    a[i] = a[i + 1];
+                }
+                a[i] = temp;
+
+            }
+        }
+        else throw new IllegalArgumentException("K må være et tall");
+    }
 }

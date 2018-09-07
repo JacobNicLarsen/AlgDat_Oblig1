@@ -8,7 +8,7 @@ public class Main {
 
         int[] b = new int[0];
         char[] c = {'A','B','C','D','E','F'};
-        Oblig1.rotasjon(c);
+        Oblig1.rotasjon(c, 0);
 
 
         System.out.println(Arrays.toString(c));
