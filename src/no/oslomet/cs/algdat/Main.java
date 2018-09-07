@@ -1,5 +1,6 @@
 package no.oslomet.cs.algdat;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
@@ -10,8 +11,11 @@ public class Main {
         char[] c = {'A','B','C','D','E','F'};
         Oblig1.rotasjon(c, 0);
 
+        String[] a = "Hei".split("");
 
-        System.out.println(Arrays.toString(c));
+        System.out.println(Arrays.toString(a));
+
+        //System.out.println(Arrays.toString(c));
 
     }
 }

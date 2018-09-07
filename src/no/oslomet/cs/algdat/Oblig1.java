@@ -243,4 +243,31 @@ public class Oblig1 {
         }
         else throw new IllegalArgumentException("K må være et tall");
     }
+
+
+    public static String flett(String s, String t){
+
+        String[] a = s.split("");
+        String[] b = t.split("");
+        String[] c = new String[(a.length) + (b.length)];
+
+        String temp = "";
+        boolean tur = true;
+
+        for(int i = 0; i < c.length - 1; i++){
+            if(tur){
+                temp = a[i];
+            }
+            if(!tur){
+                temp = c[i];
+            }
+
+
+            c[i] = temp;
+        }
+
+
+
+        return "Hei";
+    }
 }
