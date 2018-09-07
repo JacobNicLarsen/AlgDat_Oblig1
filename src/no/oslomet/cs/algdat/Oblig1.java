@@ -201,16 +201,19 @@ public class Oblig1 {
 
     }
 
+    /**
+     * Roterer en Array en til høyre
+     * @param a Array
+     */
     public static void rotasjon(char[] a){
 
-        char[] a2 = new char[a.length];
+        char temp = a[a.length - 1];
+        int i;
 
-        a2[0] = a[a.length-1];
-
-        for(int i = 1; i < a.length; i++){
-            a2[i] = a[i - 1];
+        for(i = a.length - 1; i > 0; i--){
+            a[i] = a[i - 1];
         }
+        a[i] = temp;
 
-        System.arraycopy(a2,0,a,0,a.length);
     }
 }
