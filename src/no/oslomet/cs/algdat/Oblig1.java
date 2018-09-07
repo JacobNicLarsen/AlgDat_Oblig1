@@ -173,40 +173,22 @@ public class Oblig1 {
     }
 
 
+    /**
+     * Sorterer en Array inn i til venstre og partall til høyre
+     * @param a
+     */
     public static void delsortering(int[] a){
-
-        for(int i = 0; i < a.length -1; i++){
-                bobblesort(a);
-        }
-        System.out.println(Arrays.toString(a));
-
-        sort_odd_even(a);
-
-    }
-
-    public static void bobblesort(int[] a){
-
-
-        for(int i = 0; i <a.length - 1; i++){
-            if(a[i] > a[i+1]) {
-                bytt(a, i, i + 1);
-            }
-        }
-    }
-
-
-    public static void sort_odd_even(int[] a){
 
         int i = 0;
         int j = a.length-1;
 
         while(i < j){
-            if(a[i]%2==0 && a[j]%2 == 1) {
+            if(a[i]%2==1 && a[j]%2 == 0) {
                 i++;
                 j--;
-            } else if((a[i]%2 == 1) && (a[j]%2==0)) {
+            } else if((a[i]%2 == 0) && (a[j]%2==1)) {
                 bytt(a,i,j);
-            } else if(a[i]%2 == 0){
+            } else if(a[i]%2 == 1){
                 i++;
             } else{
                 j--;
@@ -216,7 +198,19 @@ public class Oblig1 {
 
         Arrays.sort(a,0,i);
         Arrays.sort(a,i,a.length);
+
     }
 
+    public static void rotasjon(char[] a){
 
+        char[] a2 = new char[a.length];
+
+        a2[0] = a[a.length-1];
+
+        for(int i = 1; i < a.length; i++){
+            a2[i] = a[i - 1];
+        }
+
+        System.arraycopy(a2,0,a,0,a.length);
+    }
 }
