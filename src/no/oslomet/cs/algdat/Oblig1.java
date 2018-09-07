@@ -1,5 +1,6 @@
 package no.oslomet.cs.algdat;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Random;
@@ -195,24 +196,26 @@ public class Oblig1 {
 
 
     public static void sort_odd_even(int[] a){
-        for(int i = a.length-1; i > 0; i--){
-            if(a[i]%2==0){
-                bytt(a,i,finn_oddetall(a,i));
-                System.out.println(Arrays.toString(a));
-            }
-        }
-    }
 
-    public static int finn_oddetall(int[] a, int start){
+        int i = 0;
+        int j = a.length-1;
 
-        int oddetall_index = start;
-        for(int i = start; i > 0; i--){
-            if(a[i]%2 == 1){
-                oddetall_index = i;
-                return oddetall_index;
+        while(i < j){
+            if(a[i]%2==0 && a[j]%2 == 1) {
+                i++;
+                j--;
+            } else if((a[i]%2 == 1) && (a[j]%2==0)) {
+                bytt(a,i,j);
+            } else if(a[i]%2 == 0){
+                i++;
+            } else{
+                j--;
             }
+
         }
-        return oddetall_index;
+
+        Arrays.sort(a,0,i);
+        Arrays.sort(a,i,a.length);
     }
 
 
