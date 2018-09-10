@@ -14,7 +14,7 @@ public class Oblig1 {
      * @param a Array
      * @return Makes verdi
      */
-    public static int max(int[] a){
+    public static int maks(int[] a){
         if (a.length == 0){
             throw new NoSuchElementException("Tom Array");
         }
@@ -40,7 +40,7 @@ public class Oblig1 {
      * @param a Array
      * @return Antall ombyttinger
      */
-    public static int ombyttninger(int[] a){
+    public static int ombyttinger(int[] a){
         if (a.length == 0){
             throw new NoSuchElementException("Tom Array");
         }
@@ -173,6 +173,7 @@ public class Oblig1 {
     }
 
 
+    //Oppgave 4
     /**
      * Sorterer en Array inn i til venstre og partall til høyre
      * @param a
@@ -201,6 +202,7 @@ public class Oblig1 {
 
     }
 
+    //Oppgave 6
     /**
      * Roterer en Array en til høyre
      * @param a Array
@@ -245,6 +247,7 @@ public class Oblig1 {
     }
 
 
+    //Oppgave 7
     /**
      * Fletter sammen 2 Strenger og returnerer den nye strengen
      * @param a String
