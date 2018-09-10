@@ -7,13 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] b = new int[0];
-        char[] c = {'A','B','C','D','E','F'};
-        Oblig1.rotasjon(c, 0);
 
-        String[] a = "Hei".split("");
-
-        System.out.println(Arrays.toString(a));
+        System.out.println(Oblig1.flett("Hei", "123", "blå"));
 
         //System.out.println(Arrays.toString(c));
 

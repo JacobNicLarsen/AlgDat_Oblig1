@@ -245,29 +245,47 @@ public class Oblig1 {
     }
 
 
-    public static String flett(String s, String t){
+    /**
+     * Fletter sammen 2 Strenger og returnerer den nye strengen
+     * @param a String
+     * @param b String
+     * @return String
+     */
+    public static String flett(String a, String b){
 
-        String[] a = s.split("");
-        String[] b = t.split("");
-        String[] c = new String[(a.length) + (b.length)];
+        String c = "";
 
-        String temp = "";
-        boolean tur = true;
+        int i = 0;
+        int j = 0;
 
-        for(int i = 0; i < c.length - 1; i++){
-            if(tur){
-                temp = a[i];
+            while (i < a.length() && j < b.length())
+            {
+                c += a.charAt(i++);
+                c += b.charAt(j++);
             }
-            if(!tur){
-                temp = c[i];
+
+            while (i < a.length()){
+                c += a.charAt(i++);
+            }
+            while (j < b.length()){
+                c += b.charAt(j++);
             }
 
+            return c;
+    }
 
-            c[i] = temp;
+
+    public static String flett(String... s){
+
+        int k = 0;
+        int i = 0;
+        String flettet = "";
+
+
+        for(; i<s.length; i++){
+            flettet += s[i];
         }
 
-
-
-        return "Hei";
+        return flettet;
     }
 }
