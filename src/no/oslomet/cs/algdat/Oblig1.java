@@ -277,15 +277,41 @@ public class Oblig1 {
 
     public static String flett(String... s){
 
-        int k = 0;
         int i = 0;
+        int k = 0;
         String flettet = "";
 
+        flettet += s[i].charAt(k);
+        k++;
 
-        for(; i<s.length; i++){
-            flettet += s[i];
-        }
+
 
         return flettet;
+    }
+
+
+    public static int[] indekssorteting(int[] a){
+        int[] indeks = new int[a.length];
+        int minsteIndeks = a[0];
+        int i = 0;
+        int k = 0;
+
+        System.out.println(Arrays.toString(a));
+        for(int j = k; j<a.length - 1; j++){
+
+        }
+
+        for(; i<a.length - 1; i++){
+            if(minsteIndeks > a[i]){
+                minsteIndeks = i;
+                bytt(a,k,minsteIndeks);
+            }
+        }
+        System.out.println(Arrays.toString(a));
+
+        indeks[k] = minsteIndeks;
+
+        return indeks;
+
     }
 }
