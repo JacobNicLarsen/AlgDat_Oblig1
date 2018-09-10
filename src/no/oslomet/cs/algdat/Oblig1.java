@@ -197,11 +197,21 @@ public class Oblig1 {
 
         }
 
-        Arrays.sort(a,0,i);
-        Arrays.sort(a,i,a.length);
+        boblesortering(a,0,i);
+        boblesortering(a,i,a.length);
 
     }
 
+    public static void boblesortering(int[] a, int from, int to)
+    {
+        for (int n = from; n > to; n--)           // n reduseres med 1 hver gang
+        {
+            for (int i = 1; i < n; i++)                // går fra 1 til n
+            {
+                if (a[i - 1] > a[i]) bytt(a, i - 1, i);  // sammenligner/bytter
+            }
+        }
+    }
     //Oppgave 6
     /**
      * Roterer en Array en til høyre
