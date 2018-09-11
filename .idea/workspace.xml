@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9f141fd-9aa5-4957-bc86-c6e7e4db672b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgDat_Oblig1/no/oslomet/cs/algdat/Oblig1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat_Oblig1/no/oslomet/cs/algdat/Oblig1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1.java" afterDir="false" />
     </list>
@@ -39,12 +36,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8378" />
+          <entry key="java" value="9358" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8378" />
+          <entry key="JAVA" value="9358" />
         </counts>
       </usages-collector>
     </session>
@@ -83,26 +80,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <state relative-caret-position="102">
+              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="954" column="2" selection-start-line="954" selection-start-column="2" selection-end-line="954" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret selection-end-column="29" />
+            <state relative-caret-position="95">
+              <caret line="297" column="34" lean-forward="true" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,15 +109,15 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>oppgave 7</find>
       <find>oppgave 1</find>
       <find>oppgave 2</find>
       <find>oppgave 4</find>
       <find>perm</find>
       <find>oppgave 5</find>
       <find>randPerm</find>
-      <find>sort</find>
       <find>Oppgave 7</find>
+      <find>oppgave 7</find>
+      <find>sort</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,9 +126,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1.java" />
-        <option value="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Main.java" />
         <option value="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1Test.java" />
+        <option value="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Main.java" />
+        <option value="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1.java" />
       </list>
     </option>
   </component>
@@ -192,7 +180,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536592498670" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536675201701" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -210,7 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Oblig1Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.Main" />
       <module name="AlgDat_Oblig1" />
@@ -240,8 +228,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Oblig1Test" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Oblig1Test" />
       </list>
     </recent_temporary>
   </component>
@@ -262,12 +250,12 @@
       <workItem from="1536146187683" duration="1050000" />
       <workItem from="1536351876464" duration="7775000" />
       <workItem from="1536575002638" duration="4768000" />
-      <workItem from="1536580053443" duration="6319000" />
+      <workItem from="1536580053443" duration="12091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45201000" />
+    <option name="totallyTimeSpent" value="50973000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -287,7 +275,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.28906882" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.28906882" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -295,7 +283,7 @@
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.32740214" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32740214" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39679715" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.3291815" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -326,27 +314,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1.java">
+    <entry file="file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="197">
+          <caret line="954" column="2" selection-start-line="954" selection-start-column="2" selection-end-line="954" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        <state relative-caret-position="102">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1Test.java">
+    <entry file="file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/Oblig1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="954" column="2" selection-start-line="954" selection-start-column="2" selection-end-line="954" selection-end-column="2" />
+        <state relative-caret-position="95">
+          <caret line="297" column="34" lean-forward="true" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

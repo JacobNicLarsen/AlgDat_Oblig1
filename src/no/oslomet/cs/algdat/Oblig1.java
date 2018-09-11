@@ -294,13 +294,23 @@ public class Oblig1 {
         int k = 0;
         String flettet = "";
 
-        flettet += s[i].charAt(k);
-        k++;
 
+        for(;k<3;k++){
+            i = 0;
+            for(;i<s.length;i++){
+                if(s[i].length() < i){
+                    i++;
+                }
+                else{
+                    flettet += s[i].charAt(k);
+                }
+            }
+        }
 
 
         return flettet;
     }
+
 
 
     public static int[] indekssorteting(int[] a){
