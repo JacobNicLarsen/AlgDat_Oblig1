@@ -288,69 +288,80 @@ public class Oblig1 {
     }
 
 
+    /**
+     * Tar in s mengde strenger i fletter dem
+     * @param s String
+     * @return String
+     */
     public static String flett(String... s){
 
-        int i;
-        int k = 0;
-        String flettet = "";
+        int i; // index
+        int k = 0; // index over bokstav
+        String flettet = ""; // flettet
         int antall_Strenger = s.length;
-        System.out.println("Antall Strenger er " + antall_Strenger);
 
 
 
-        while(antall_Strenger > 1){
-            i = 0;
-            for(;i<s.length;i++){
+        while(antall_Strenger > 1){ //kjører løkka så lenge det er flere strenger
+            i = 0; // Startet på starten av Strengene
+            for(;i<s.length;i++){ //Kjører gjennom alle strengene og legger til bokstavene 1 og 1
 
-                if(k < s[i].length()){
+                if(k < s[i].length()){ // om det er flere bokstaver i strengen legges den som indekseres til
                     flettet += s[i].charAt(k);
-                    System.out.println("Dette er den nye ken som legges til: " + s[i].charAt(k) + " som ligger på index " + i);
-                    System.out.println(flettet);
                 }
 
-                /*
-                else if(k > s[i].length()){
-                    System.out.println(" --Hopper over bokstaven på index " + i);
-                    System.out.println(" --Fordi " + k + " Større enn: " + s[i].length());
-                    System.out.println(" --Hopper til index: " + i);
-                }*/
-
-                if(k == s[i].length()){
+                if(k == s[i].length()){ // Om det ikke er flere bokstave igjen fjernes en streng
 
                     antall_Strenger --;
                 }
             }
-            k++;
+            k++; // Går til neste vokstav
         }
 
 
-        return flettet;
+        return flettet; // returnerer det flettet strengen
     }
 
 
+//Oppgave 8
 
     public static int[] indekssorteting(int[] a){
         int[] indeks = new int[a.length];
-        int minsteIndeks = a[0];
-        int i = 0;
+        int minsteIndeks = 0;
+
+        int i;
         int k = 0;
 
-        System.out.println(Arrays.toString(a));
-        for(int j = k; j<a.length - 1; j++){
-
-        }
-
-        for(; i<a.length - 1; i++){
-            if(minsteIndeks > a[i]){
-                minsteIndeks = i;
-                bytt(a,k,minsteIndeks);
+        for(; k < indeks.length - 1; k++){
+            i = 0;
+            for(; i<a.length; i++){
+                if(!finnIndex(indeks,i)){
+                    i++;
+                }
+                else if (a[i] <= a[minsteIndeks]){
+                    System.out.println("Kjører if else statement fordi minsteindeks: " + a[i] + "<=" + a[minsteIndeks]);
+                    minsteIndeks = i;
+                    System.out.println("--minsteindex : " + minsteIndeks);
+                }
             }
-        }
-        System.out.println(Arrays.toString(a));
+            indeks[k] = minsteIndeks;
 
-        indeks[k] = minsteIndeks;
+            System.out.println(Arrays.toString(indeks));
+        }
 
         return indeks;
-
     }
+
+    public static boolean finnIndex(int[] a, int i){
+
+        for(int j = 0; j<a.length - 1; j++){
+            if(a[j] == i){
+                System.out.println("Finnindex triggerd " + a[j] + " " +  i);
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 }
