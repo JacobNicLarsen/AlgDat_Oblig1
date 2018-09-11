@@ -290,21 +290,33 @@ public class Oblig1 {
 
     public static String flett(String... s){
 
-        int i = 0;
+        int i;
         int k = 0;
         String flettet = "";
+        int antall_Strenger = s.length;
+        System.out.println("Antall Strenger er " + antall_Strenger);
 
 
-        for(;k<3;k++){
+
+        while(antall_Strenger > 0){
             i = 0;
             for(;i<s.length;i++){
-                if(s[i].length() < i){
-                    i++;
-                }
-                else{
+
+                if(k < s[i].length()){
                     flettet += s[i].charAt(k);
                 }
+
+                /*
+                else if(k == s[i].length()){
+                    antall_Strenger --;
+                    System.out.println("Denne virker");
+                }*/
+                else if(k > s[i].length()){
+                    i++;
+                    antall_Strenger --;
+                }
             }
+            k++;
         }
 
 
