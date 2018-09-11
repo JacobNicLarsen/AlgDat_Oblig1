@@ -298,21 +298,25 @@ public class Oblig1 {
 
 
 
-        while(antall_Strenger > 0){
+        while(antall_Strenger > 1){
             i = 0;
             for(;i<s.length;i++){
 
                 if(k < s[i].length()){
                     flettet += s[i].charAt(k);
+                    System.out.println("Dette er den nye ken som legges til: " + s[i].charAt(k) + " som ligger på index " + i);
+                    System.out.println(flettet);
                 }
 
                 /*
-                else if(k == s[i].length()){
-                    antall_Strenger --;
-                    System.out.println("Denne virker");
-                }*/
                 else if(k > s[i].length()){
-                    i++;
+                    System.out.println(" --Hopper over bokstaven på index " + i);
+                    System.out.println(" --Fordi " + k + " Større enn: " + s[i].length());
+                    System.out.println(" --Hopper til index: " + i);
+                }*/
+
+                if(k == s[i].length()){
+
                     antall_Strenger --;
                 }
             }
