@@ -331,8 +331,6 @@ public class Oblig1 {
             indeks[i] = i;
         }
 
-
-
         for(int j = a.length - 1; j > 0; j--) { // Flytter på indeksene i indeks tabellen
             for (int i = 0; i < j; i++) {
                 if(a[indeks[i]] < a[indeks[j]]){
@@ -349,6 +347,19 @@ public class Oblig1 {
 
 //Oppgave 9
 
+    public static int[] tredjeMin(int[] a){
+
+        int min = 0;
+        int nestMin = 1;
+        int tredjMin = 2;
+
+        int minVerdi = a[0];
+        int nestMinVerdi = a[1];
+        int tredjMinVerdi = a [2];
+
+        return new int[] {minVerdi, nestMinVerdi, tredjMinVerdi};
+
+    }
 
 
 
