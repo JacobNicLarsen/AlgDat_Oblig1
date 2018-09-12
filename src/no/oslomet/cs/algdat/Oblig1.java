@@ -136,9 +136,9 @@ public class Oblig1 {
     //Oppgave 3
 
     /**
-     * Finner antall unike tall i en usortert Array
+     * Finner antall unlike tall i en usortert Array
      * @param a Array
-     * @return Antall unike tall
+     * @return Antall unlike tall
      */
     public static int antallUlikeUsortert(int[] a){
         if(a.length == 0) return 0;
@@ -323,6 +323,11 @@ public class Oblig1 {
 
 //Oppgave 8
 
+    /**
+     * Sorterer indeksene til en Array
+     * @param a Array
+     * @return Array index
+     */
     public static int[] indekssortering(int[] a){
 
         int[] indeks = new int[a.length];
@@ -347,6 +352,11 @@ public class Oblig1 {
 
 //Oppgave 9
 
+    /**
+     * Returnerer de tre indeksene til de laveste tallene i stigene rekkefølge
+     * @param a
+     * @return
+     */
     public static int[] tredjeMin(int[] a){
         int n = a.length;
         if(n < 3){
@@ -398,6 +408,12 @@ public class Oblig1 {
 
     }
 
+    /**
+     * Soterer indekser fra 0 til
+     * @param a Array
+     * @param til int
+     * @return Array
+     */
     public static int[] indekssortering(int[] a, int til){
 
         int[] indeks = new int[a.length];
@@ -418,4 +434,59 @@ public class Oblig1 {
 
     }
 
+    //Oppgave 10
+
+    public static boolean inneholdt(String  a,  String  b){
+        int i = 0;
+        int antallbokstaverA = 0;
+        int antallbokstaverB = 0;
+        while(true){
+
+            i++;
+            antallbokstaverA = 0;
+            antallbokstaverB = 0;
+
+            if(i > a.length()){
+                System.out.println("Går ut av for løkka");
+                break;
+            }
+
+            if(String_unik(a,i)){
+                for(int j = i; j < a.length() - 1;j++){
+                    if(a.charAt(i) == a.charAt(j)){
+                        antallbokstaverA ++;
+                    }
+                }
+
+                for(int k = 0; k <b.length(); k++){
+                    if(a.charAt(i) == b.charAt(k)){
+                        antallbokstaverB++;
+                    }
+                    if(antallbokstaverA >= antallbokstaverB){
+                        System.out.println("Det er like mange bokstaver av " + a.charAt(i));
+                    }
+                    else{
+                        System.out.println("Det er ikke like mange av " + a.charAt(i));
+                        return false;
+                    }
+                }
+
+            }
+            else{
+                i++;
+            }
+
+        }
+
+        return true;
+    }
+
+    public static boolean String_unik(String a, int index){ // Tester om tallet har vært tidligere i tabellen
+        for(int i = index - 1; i >= 0; i--){
+            if(a.charAt(index) == a.charAt(i)){
+                return false;
+            }
+        }
+        return true;
+    }
 }
