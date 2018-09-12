@@ -180,80 +180,79 @@ public class Oblig1 {
      */
     public static void delsortering(int[] a){
 
-        int i = 0;
-        int j = a.length-1;
+        int v = 0;
+        int h = a.length-1;
 
-        while(i < j){
-            if(a[i]%2==1 && a[j]%2 == 0) {
-                i++;
-                j--;
-            } else if((a[i]%2 == 0) && (a[j]%2==1)) {
-                bytt(a,i,j);
-            } else if(a[i]%2 == 1){
-                i++;
+        while(v < h){
+            if(a[v]%2==1 && a[h]%2 == 0) {
+                v++;
+                h--;
+            } else if((a[v]%2 == 0) && (a[h]%2==1)) {
+                bytt(a,v,h);
+            } else if(a[v]%2 == 1){
+                v++;
             } else{
-                j--;
+                h--;
             }
 
         }
 
-        boblesortering(a,0,i);
-        boblesortering(a,i,a.length);
+        Arrays.sort(a,0,v);
+        Arrays.sort(a,v,a.length);
 
     }
 
     public static void boblesortering(int[] a, int from, int to)
     {
-        for (int n = from; n > to; n--)           // n reduseres med 1 hver gang
+        int minste_tall;
+        for (int n = from; n > to; n--)
         {
-            for (int i = 1; i < n; i++)                // går fra 1 til n
+            for (int i = 1; i < n; i++)
             {
-                if (a[i - 1] > a[i]) bytt(a, i - 1, i);  // sammenligner/bytter
+                if (a[i - 1] > a[i]) bytt(a, i - 1, i);
             }
         }
     }
-    //Oppgave 6
+   //Oppgave 5
     /**
      * Roterer en Array en til høyre
      * @param a Array
      */
     public static void rotasjon(char[] a){
 
-        char temp = a[a.length - 1];
-        int i;
-
-        for(i = a.length - 1; i > 0; i--){
-            a[i] = a[i - 1];
+        for(int i = a.length - 1; i > 0; i--){
+            char temp = a[i];
+            a[i] = a[i-1];
+            a[i-1] = temp;
         }
-        a[i] = temp;
-
     }
 
+//Oppgave 6
 
-    public static void rotasjon(char[] a, int k){
+    public static void rotasjon(char[] c, int d)    // 3. versjon
+    {
+        int n = c.length;  if (n < 2) return;         // ingen rotasjon
+        if ((d %= n) < 0) d += n;                     // motsatt vei?
 
-        if(k>0){
-            for (int i = 0; i < k; i++)
-                rotasjon(a);
-        }
-        else if(k == 0){
-            //Ingen rotasjon
-        }
-        else if(k < 0){
+        int s = gcd(n, d);                            // største felles divisor
 
-            for(int j = 0; j>k;j--){
+        for (int k = 0; k < s; k++)                   // antall sykler
+        {
+            char verdi = c[k];                          // hjelpevariabel
 
-                char temp = a[0];
-                int i;
-
-                for(i = 0; i < a.length - 1; i++){
-                    a[i] = a[i + 1];
-                }
-                a[i] = temp;
-
+            for (int i = k - d, j = k; i != k; i -= d)  // løkke
+            {
+                if (i < 0) i += n;                        // sjekker fortegnet til i
+                c[j] = c[i]; j = i;                       // kopierer og oppdaterer j
             }
+
+            c[k + d] = verdi;                           // legger tilbake verdien
         }
-        else throw new IllegalArgumentException("K må være et tall");
+    }
+
+    public static int gcd(int a, int b)  // Euklids algoritme
+    {
+        return b == 0 ? a : gcd(b, a % b);
     }
 
 
@@ -302,7 +301,7 @@ public class Oblig1 {
 
 
 
-        while(antall_Strenger > 1){ //kjører løkka så lenge det er flere strenger
+        while(antall_Strenger > 0){ //kjører løkka så lenge det er flere strenger
             i = 0; // Startet på starten av Strengene
             for(;i<s.length;i++){ //Kjører gjennom alle strengene og legger til bokstavene 1 og 1
 
@@ -311,7 +310,6 @@ public class Oblig1 {
                 }
 
                 if(k == s[i].length()){ // Om det ikke er flere bokstave igjen fjernes en streng
-
                     antall_Strenger --;
                 }
             }
@@ -326,30 +324,35 @@ public class Oblig1 {
 //Oppgave 8
 
     public static int[] indekssorteting(int[] a){
+
         int[] indeks = new int[a.length];
-        int minsteIndeks = 0;
 
         int i;
-        int k = 0;
 
-        for(; k < indeks.length - 1; k++){
-            i = 0;
-            for(; i<a.length; i++){
-                if(!finnIndex(indeks,i)){
-                    i++;
+        int minsteIndex = 0;
+        int startIndex = 0;
+
+        for(int k = 0; k<indeks.length; k++) {
+            i=0;
+            for (; i < a.length; i++) {
+                if (a[i] <= a[minsteIndex] && !finnIndex(indeks, a[i])) {
+                    minsteIndex = i;
                 }
-                else if (a[i] <= a[minsteIndeks]){
-                    System.out.println("Kjører if else statement fordi minsteindeks: " + a[i] + "<=" + a[minsteIndeks]);
-                    minsteIndeks = i;
-                    System.out.println("--minsteindex : " + minsteIndeks);
+                else if (a[i] > a[minsteIndex] && finnIndex(indeks, a[i])) {
+                    startIndex = i;
                 }
+
+                System.out.println("Den nye startindeksen: " + startIndex);
+                System.out.println("Den minste indexen ligger på : " + minsteIndex);
             }
-            indeks[k] = minsteIndeks;
-
-            System.out.println(Arrays.toString(indeks));
+            indeks[k] = minsteIndex;
+            minsteIndex = startIndex;
+            System.out.println(Arrays.toString(a));
+            System.out.println("Index tabellen: " + Arrays.toString(indeks));
         }
 
         return indeks;
+
     }
 
     public static boolean finnIndex(int[] a, int i){
@@ -362,6 +365,11 @@ public class Oblig1 {
         }
         return true;
     }
+
+
+//Oppgave 9
+
+
 
 
 }
