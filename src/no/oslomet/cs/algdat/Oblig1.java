@@ -333,7 +333,7 @@ public class Oblig1 {
 
         for(int j = a.length - 1; j > 0; j--) { // Flytter på indeksene i indeks tabellen
             for (int i = 0; i < j; i++) {
-                if(a[indeks[i]] < a[indeks[j]]){
+                if(a[indeks[i]] > a[indeks[j]]){
                     bytt(indeks,i,j);
                 }
             }
@@ -348,19 +348,74 @@ public class Oblig1 {
 //Oppgave 9
 
     public static int[] tredjeMin(int[] a){
+        int n = a.length;
+        if(n < 3){
+            throw new NoSuchElementException("Tabellen må ha mer " + n + " Elementer");
+        }
 
-        int min = 0;
-        int nestMin = 1;
-        int tredjMin = 2;
+        int min = indekssortering(a,3)[0];
+        int nestMin = indekssortering(a,3)[1];
+        int tredjMin = indekssortering(a,3)[2];
 
-        int minVerdi = a[0];
-        int nestMinVerdi = a[1];
-        int tredjMinVerdi = a [2];
+        int minVerdi = a[min];
+        int nestMinVerdi = a[nestMin];
+        int tredjMinVerdi = a [tredjMin];
 
-        return new int[] {minVerdi, nestMinVerdi, tredjMinVerdi};
+        for(int i = 3; i < n;i++){
+            if(a[i] < tredjMinVerdi){
+                if(a[i] < nestMinVerdi){
+
+                    if(a[i] < minVerdi){
+                        tredjMin = nestMin;
+                        tredjMinVerdi = nestMinVerdi;
+
+                        nestMin = min;
+                        nestMinVerdi = minVerdi;
+
+                        min = i;
+                        minVerdi = a[i];
+                    }
+                    else{
+                        tredjMin = nestMin;
+                        tredjMinVerdi = nestMinVerdi;
+
+                        nestMin = i;
+                        nestMinVerdi = a[i];
+                    }
+                }
+                else{
+                    tredjMin = i;
+                    tredjMinVerdi = a[i];
+
+                }
+            }
+        }
+
+
+
+
+        return new int[] {min, nestMin, tredjMin};
 
     }
 
+    public static int[] indekssortering(int[] a, int til){
 
+        int[] indeks = new int[a.length];
+
+        for(int i = 0; i < til; i++){
+            indeks[i] = i;
+        }
+
+        for(int j = til - 1; j > 0; j--) { // Flytter på indeksene i indeks tabellen
+            for (int i = 0; i < j; i++) {
+                if(a[indeks[i]] > a[indeks[j]]){
+                    bytt(indeks,i,j);
+                }
+            }
+        }
+
+        return indeks;
+
+    }
 
 }

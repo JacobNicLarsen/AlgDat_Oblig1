@@ -7,19 +7,18 @@ public class Main{
     public static void main(String[] args) {
 
         int i = 8;
-        int[] a = {8,2,6,7,3,1,4};
-        int[] b = {5,2,1,4,6,0,3};
+        int[] a = {1,3,2};
+        int[] b = {10, 3, 2, 9, 4, 8, 1, 5, 6, 7};
+        //6, 2, 9
+        //Skriver ut i rekken: 1, 2, 7
+        //Burde skrive: 6, 2, 1
+        //Burde skrive ut 1, 2, 3
 
-        System.out.println(Arrays.toString(Oblig1.indekssortering(a)));
-        //Oblig1.finnIndex(a,1);
+        int[] c = {1,2,4,3,5,6};
 
-        /*
-        if(!Oblig1.finnIndex(a,i)){
-            System.out.println(i + " Ligger i tabellen");
-        }
-        else{
-            System.out.println(i + " Ligger ikke i tabellen");
-        }*/
+
+
+        System.out.println(Arrays.toString(Oblig1.tredjeMin(c)));
 
     }
 }
