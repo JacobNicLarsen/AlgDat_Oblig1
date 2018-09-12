@@ -183,11 +183,11 @@ public class Oblig1 {
         int v = 0;
         int h = a.length-1;
 
-        while(v < h){
-            if(a[v]%2==1 && a[h]%2 == 0) {
+        while(v <= h){
+            if((a[v]%2== 1 || a[v]%2== -1) && a[h]%2 == 0) {
                 v++;
                 h--;
-            } else if((a[v]%2 == 0) && (a[h]%2==1)) {
+            } else if((a[v]%2 == 0) && (a[h]%2==1 || a[h]%2==-1)) {
                 bytt(a,v,h);
             } else if(a[v]%2 == 1){
                 v++;
@@ -196,6 +196,8 @@ public class Oblig1 {
             }
 
         }
+
+
 
         Arrays.sort(a,0,v);
         Arrays.sort(a,v,a.length);
