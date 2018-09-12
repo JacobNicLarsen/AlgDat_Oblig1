@@ -442,7 +442,6 @@ public class Oblig1 {
         int antallbokstaverB = 0;
         while(true){
 
-            i++;
             antallbokstaverA = 0;
             antallbokstaverB = 0;
 
@@ -459,23 +458,30 @@ public class Oblig1 {
                 }
 
                 for(int k = 0; k <b.length(); k++){
+
+                    System.out.println(a.charAt(i) + " " + b.charAt(k));
+
                     if(a.charAt(i) == b.charAt(k)){
                         antallbokstaverB++;
+                        System.out.println("");
                     }
-                    if(antallbokstaverA >= antallbokstaverB){
+                    if(antallbokstaverA == antallbokstaverB){
                         System.out.println("Det er like mange bokstaver av " + a.charAt(i));
                     }
                     else{
                         System.out.println("Det er ikke like mange av " + a.charAt(i));
                         return false;
                     }
+
                 }
+
 
             }
             else{
                 i++;
             }
 
+            i++;
         }
 
         return true;
