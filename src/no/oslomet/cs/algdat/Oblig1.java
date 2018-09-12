@@ -323,48 +323,28 @@ public class Oblig1 {
 
 //Oppgave 8
 
-    public static int[] indekssorteting(int[] a){
+    public static int[] indekssortering(int[] a){
 
         int[] indeks = new int[a.length];
 
-        int i;
+        for(int i = 0; i < a.length; i++){
+            indeks[i] = i;
+        }
 
-        int minsteIndex = 0;
-        int startIndex = 0;
 
-        for(int k = 0; k<indeks.length; k++) {
-            i=0;
-            for (; i < a.length; i++) {
-                if (a[i] <= a[minsteIndex] && !finnIndex(indeks, a[i])) {
-                    minsteIndex = i;
+
+        for(int j = a.length - 1; j > 0; j--) { // Flytter på indeksene i indeks tabellen
+            for (int i = 0; i < j; i++) {
+                if(a[indeks[i]] < a[indeks[j]]){
+                    bytt(indeks,i,j);
                 }
-                else if (a[i] > a[minsteIndex] && finnIndex(indeks, a[i])) {
-                    startIndex = i;
-                }
-
-                System.out.println("Den nye startindeksen: " + startIndex);
-                System.out.println("Den minste indexen ligger på : " + minsteIndex);
             }
-            indeks[k] = minsteIndex;
-            minsteIndex = startIndex;
-            System.out.println(Arrays.toString(a));
-            System.out.println("Index tabellen: " + Arrays.toString(indeks));
         }
 
         return indeks;
 
     }
 
-    public static boolean finnIndex(int[] a, int i){
-
-        for(int j = 0; j<a.length - 1; j++){
-            if(a[j] == i){
-                System.out.println("Finnindex triggerd " + a[j] + " " +  i);
-                return false;
-            }
-        }
-        return true;
-    }
 
 
 //Oppgave 9

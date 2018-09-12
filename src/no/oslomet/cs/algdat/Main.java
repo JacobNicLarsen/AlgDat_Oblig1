@@ -10,7 +10,7 @@ public class Main{
         int[] a = {8,2,6,7,3,1,4};
         int[] b = {5,2,1,4,6,0,3};
 
-        System.out.println(Arrays.toString(Oblig1.indekssorteting(a)));
+        System.out.println(Arrays.toString(Oblig1.indekssortering(a)));
         //Oblig1.finnIndex(a,1);
 
         /*
