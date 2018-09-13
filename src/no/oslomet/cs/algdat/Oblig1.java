@@ -452,40 +452,22 @@ public class Oblig1 {
         Arrays.sort(a_ascii);
         Arrays.sort(b_ascii);
 
-        System.out.println(Arrays.toString(a_ascii));
-        System.out.println(Arrays.toString(b_ascii));
+        //System.out.println(Arrays.toString(a_ascii));
+        //System.out.println(Arrays.toString(b_ascii));
 
         int j = 0;
-        for(int i = 0; i < a_ascii.length - 1; i++){
+        for(int i = 0; i < b_ascii.length; i++){
 
+            if(a_ascii[j] == b_ascii[i]){
 
-            for(int k = 0; k < b_ascii.length - 1; k++) {
-                if(j > b_ascii.length - 1){
-                    return false;
+                j++;
+                if(j == a_ascii.length){
+                    return true;
                 }
-
-                if (a_ascii[i] == b_ascii[j]) {
-
-                    System.out.println(a_ascii[i] + "==" + b_ascii[j]);
-                    i++;
-                    j++;
-                }
-                if (a_ascii[i] > b_ascii[j]){
-                    System.out.println(a_ascii[i] + " > " + b_ascii[j]);
-                    System.out.print(" Øker j fra: " + j);
-                    j++;
-                    System.out.println(" Til: " + j);
-                }
-                if (a_ascii[i] < b_ascii[j]) {
-                    System.out.println(a_ascii[i] + "<" + b_ascii[j] + " returnerer false");
-                    return false;
-                }
-
             }
         }
 
-        System.out.println("Alle tallene stemte så returnerer true");
-        return true;
+        return false;
 
     }
     /*
