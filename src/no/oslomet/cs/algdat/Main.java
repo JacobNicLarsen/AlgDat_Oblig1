@@ -7,11 +7,17 @@ public class Main{
 
     public static void main(String[] args) {
 
-        int[] a= {1,2,3,4,5,-1,-2,-3,-4,-5};
-        int[] b = {1,2,3,4,5,6,7,8,9,10};
+        String a = "AABB";
+        String b = "AAABBRRR";
 
 
-        Oblig1.delsortering(a);
-        System.out.println(Arrays.toString(a));
+        System.out.println(Oblig1.inneholdt(a,b));
+
+
+
+
+
+
+        //System.out.println(Oblig1.inneholdt(a,b));
     }
 }
