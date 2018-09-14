@@ -1,5 +1,7 @@
 package no.oslomet.cs.algdat;
 
+import com.sun.scenario.effect.Merge;
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
@@ -199,9 +201,44 @@ public class Oblig1 {
 
 
 
-        Arrays.sort(a,0,v);
-        Arrays.sort(a,v,a.length);
+        //Kvikksortering fra kompendie
+        kvikksortering(a,0,v);
+        kvikksortering(a,v,a.length);
 
+    }
+
+
+    private static int parter0(int[] a, int v, int h, int skilleverdi)
+    {
+        while (true)                                  // stopper når v > h
+        {
+            while (v <= h && a[v] < skilleverdi) v++;   // h er stoppverdi for v
+            while (v <= h && a[h] >= skilleverdi) h--;  // v er stoppverdi for h
+
+            if (v < h) bytt(a,v++,h--);                 // bytter om a[v] og a[h]
+            else  return v;  // a[v] er nåden første som ikke er mindre enn skilleverdi
+        }
+    }
+
+    private static int sParter0(int[] a, int v, int h, int indeks)
+    {
+        bytt(a, indeks, h);           // skilleverdi a[indeks] flyttes bakerst
+        int pos = parter0(a, v, h - 1, a[h]);  // partisjonerer a[v:h − 1]
+        bytt(a, pos, h);              // bytter for å få skilleverdien på rett plass
+        return pos;                   // returnerer posisjonen til skilleverdien
+    }
+
+    private static void kvikksortering0(int[] a, int v, int h)  // en privat metode
+    {
+        if (v >= h) return;  // a[v:h] er tomt eller har maks ett element
+        int k = sParter0(a, v, h, (v + h)/2);  // bruker midtverdien
+        kvikksortering0(a, v, k - 1);     // sorterer intervallet a[v:k-1]
+        kvikksortering0(a, k + 1, h);     // sorterer intervallet a[k+1:h]
+    }
+
+    public static void kvikksortering(int[] a, int fra, int til) // a[fra:til>
+    {
+        kvikksortering0(a, fra, til - 1);  // v = fra, h = til - 1
     }
 
    //Oppgave 5
@@ -220,28 +257,29 @@ public class Oblig1 {
 
 //Oppgave 6
 
-    public static void rotasjon(char[] c, int d)    // 3. versjon
+    public static void rotasjon(char[] c, int d)
     {
-        int n = c.length;  if (n < 2) return;         // ingen rotasjon
-        if ((d %= n) < 0) d += n;                     // motsatt vei?
+        int n = c.length;
+        if (n < 2) return;
+        if ((d %= n) < 0) d += n;
 
-        int s = gcd(n, d);                            // største felles divisor
+        int s = gcd(n, d);
 
-        for (int k = 0; k < s; k++)                   // antall sykler
+        for (int k = 0; k < s; k++)
         {
-            char verdi = c[k];                          // hjelpevariabel
+            char verdi = c[k];
 
-            for (int i = k - d, j = k; i != k; i -= d)  // løkke
+            for (int i = k - d, j = k; i != k; i -= d)
             {
-                if (i < 0) i += n;                        // sjekker fortegnet til i
-                c[j] = c[i]; j = i;                       // kopierer og oppdaterer j
+                if (i < 0) i += n;
+                c[j] = c[i]; j = i;
             }
 
-            c[k + d] = verdi;                           // legger tilbake verdien
+            c[k + d] = verdi;
         }
     }
 
-    public static int gcd(int a, int b)  // Euklids algoritme
+    public static int gcd(int a, int b) //Greatest common divider
     {
         return b == 0 ? a : gcd(b, a % b);
     }
@@ -449,11 +487,10 @@ public class Oblig1 {
             b_ascii[i] = b.charAt(i);
         }
 
-        Arrays.sort(a_ascii);
-        Arrays.sort(b_ascii);
+        //Kan ikke bruke quicksort her for da blir det stackowerflow
+        mergeSort(a_ascii,0,a_ascii.length - 1);
+        mergeSort(b_ascii,0,b_ascii.length - 1);
 
-        //System.out.println(Arrays.toString(a_ascii));
-        //System.out.println(Arrays.toString(b_ascii));
 
         int j = 0;
         for(int i = 0; i < b_ascii.length; i++){
@@ -470,74 +507,71 @@ public class Oblig1 {
         return false;
 
     }
-    /*
-
-    int[] ArrayB = new int[b.length()];
-    int[] ArrayA = new int[a.length()];
-
-        for(int k = 0; k < b.length();k++){
-        ArrayB[k] = b.charAt(k);
-    }
-
-        for(int k = 0; k < a.length();k++){
-        ArrayA[k] = a.charAt(k);
-    }
-
-        Arrays.sort(ArrayB);
-        Arrays.sort(ArrayA);
-
-        if(!(antallUlikeSortert(ArrayA) >= antallUlikeSortert(ArrayB))){
-        return false;
-    }
 
 
 
-    int antallA;
-    int antallB;
+    //En fletting
+    public static void merge(int a[], int l, int m, int r)
+    {
+        int n1 = m - l + 1;
+        int n2 = r - m;
 
-        for(int m = 0; m < antallUlikeSortert(ArrayA); m++) {
+        int L[] = new int [n1];
+        int R[] = new int [n2];
 
-        antallA = 1;
-        int i = 0;
-        while (true) {
-            if(i >= ArrayA.length) break;
-            if (ArrayA[i] == ArrayA[i + 1]) {
-                antallA++;
+        for (int i=0; i<n1; ++i){
+            L[i] = a[l + i];
+        }
+        for (int j=0; j<n2; ++j) {
+            R[j] = a[m + 1 + j];
+        }
+
+
+        int i = 0, j = 0;
+
+        int k = l;
+        while (i < n1 && j < n2)
+        {
+            if (L[i] <= R[j])
+            {
+                a[k] = L[i];
                 i++;
-                System.out.println(i);
-            } else {
-                break;
             }
+            else
+            {
+                a[k] = R[j];
+                j++;
+            }
+            k++;
         }
 
-        i += 1;
-
-        antallB = 1;
-        int k = 0;
-        while (true) {
-            if(k >= ArrayB.length) break;
-            if (ArrayA[i] != ArrayB[k]) {
-                k++;
-            }
-            else if (ArrayB[k] == ArrayB[k + 1]) {
-                antallB++;
-                k++;
-            }
-            else {
-                break;
-            }
-
-            if(antallA == antallB){
-                break;
-            }
-
+        while (i < n1)
+        {
+            a[k] = L[i];
+            i++;
+            k++;
         }
-        k += 1;
 
-
-        if (!(antallA < antallB)) {
-            return false;
+        while (j < n2)
+        {
+            a[k] = R[j];
+            j++;
+            k++;
         }
     }
-    */
+
+
+    //Flettesortering som er rekusiv
+    public static void mergeSort(int a[], int l, int r)
+    {
+        if (l < r)
+        {
+            int m = (l+r)/2;
+
+            mergeSort(a, l, m);
+            mergeSort(a , m+1, r);
+
+            merge(a, l, m, r);
+        }
+    }
 }
