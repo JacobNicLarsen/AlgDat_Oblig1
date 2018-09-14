@@ -1,0 +1,248 @@
+commit c1fc30fd3d524f49cab05c089d21732f2ee2993e (HEAD -> master, origin/master)
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Fri Sep 14 09:59:16 2018 +0200
+
+    Oblig 1 ferdig
+
+commit d63b93daa242bc342078bac90f79a7f36a604df2
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Thu Sep 13 21:20:26 2018 +0200
+
+    Maa fikse sortering paa 10
+
+commit f660b44c3cb5054de9ac39aba60fa9b2f9e156c2
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Thu Sep 13 21:13:16 2018 +0200
+
+    Jobber med bugs paa oppgave 10
+
+commit 8e86d644d65324e76f709a240d38f9f0d133473f
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Thu Sep 13 00:43:19 2018 +0200
+
+    bugs i oppgave 4 fikset
+
+commit 3aa19e224f94ec333d803849b95f6979252ac9d3
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Wed Sep 12 21:33:51 2018 +0200
+
+    Jobber fortsatt med 10
+
+commit 9957903ebac6ac752e96c57481e7c02d83182aa1
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Wed Sep 12 21:28:45 2018 +0200
+
+    Jobber med Oppgave 10
+
+commit 463b1ed3fcb3608f5022c8e77a72ddc322de6f5b
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Wed Sep 12 20:28:29 2018 +0200
+
+    Oppgave 9 ferdig
+
+commit f97617b1e480164dff1bc0c92cb00c54bdfc15c0
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Wed Sep 12 18:10:23 2018 +0200
+
+    startet på oppgave 9
+
+commit aa803dd102afc6c689a70dd3f827c632c1dbc088
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Wed Sep 12 17:59:20 2018 +0200
+
+    Oppgave 8 fikset
+
+commit de481505138287be57fb30dedce35899377a68a4
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Wed Sep 12 17:13:45 2018 +0200
+
+    fikset bugs
+
+commit 5051f0d2d64c552b29444a9ac61b57d320577518
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Tue Sep 11 23:52:45 2018 +0200
+
+    Jobber med 8
+
+commit 3f5e3bb05f6058a94b82aa3f2b6fb921e4bde1cd
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Tue Sep 11 21:12:32 2018 +0200
+
+    Oppgave 7b fikset
+
+commit 0b482c99b89d7b1b305d9537eb23fb5995c46eec
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Tue Sep 11 18:01:26 2018 +0200
+
+    fikser bug på 7b
+
+commit f639be3d4e4bba1d77c0d95223d930af94019265
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Tue Sep 11 16:13:58 2018 +0200
+
+    Forste del av 7b fikset
+
+commit 1a5e3486828e61c50355b3c82ac2853842861817
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 10 17:15:34 2018 +0200
+
+    La til egen test klasse
+
+commit 0e3fe8b7f60bf20449c00d95a2ef3bd0279001dd
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 10 15:25:43 2018 +0200
+
+    Kjorte test på alle til og med 6, alle passert
+
+commit 6bd07cfa6a6eb665915b800376a47535f153f609
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 10 15:08:18 2018 +0200
+
+    jobber med bugs i oppgave 7b og 8
+
+commit f46807015daaf428d73c6169234d5c5da6d927f7
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 10 14:20:18 2018 +0200
+
+    Oppgave 7a ferdig, jobber med 7b
+
+commit 4fc893b1ed52a40f97198a594f64025a8acf4eeb
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Sat Sep 8 00:59:57 2018 +0200
+
+    Startet på oppgave 7
+
+commit 14d3ef3dd4590a2433276e7d0997122fb9abe6ef
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Sat Sep 8 00:29:47 2018 +0200
+
+    Oppgave 6 ferdig
+
+commit aedcb726613f5965fb0140245f61ea8ecb57c5b3
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Sat Sep 8 00:10:53 2018 +0200
+
+    Oppgave 5 fikset
+
+commit ea498f6d244429537ede71d2d40559c2e5c842e1
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Fri Sep 7 23:51:43 2018 +0200
+
+    Oppgave 5 ferdig, ikke optimalisert
+
+commit 9ad6f97c5f53528db8228c2aece6ba29ac6ff929
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Fri Sep 7 22:47:46 2018 +0200
+
+    Oppgave 4 ferdig
+
+commit e2b73334220dae0ea9eb591ac4a0607e5d4bff41
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Thu Sep 6 01:00:10 2018 +0200
+
+    Oppgave 4 nesten ferdig
+
+commit 10ad23e4ae977c48ce56987ef91002d428ef1385
+Author: JacobNicLarsen <JacobNicLarse@gmail.com>
+Date:   Wed Sep 5 20:27:39 2018 +0200
+
+    Oppgave 4 nesten ferdig
+
+commit 308ef58775a9ac17594f4f7c4a42fc442c82198d
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Wed Sep 5 17:19:01 2018 +0200
+
+    pause fra oppgave 4
+
+commit 9471a74d841aedf212c6509dc4b1d3e074c55c4a
+Author: JacobNicLarsen <JacobNicLarse@gmail.com>
+Date:   Wed Sep 5 13:42:36 2018 +0200
+
+    jobber med oppgave 4
+
+commit 0f2f9fac5dc662f1572ef01cece2f0ffe6d9cf21
+Author: JacobNicLarsen <JacobNicLarse@gmail.com>
+Date:   Tue Sep 4 15:20:15 2018 +0200
+
+    Startet oppgave 4
+
+commit 73471a7be2dc5d2fcd47c79b46607697ab27a94c
+Author: JacobNicLarsen <JacobNicLarse@gmail.com>
+Date:   Tue Sep 4 14:02:01 2018 +0200
+
+    Oppgave 3 fikset
+
+commit 03bc5e8534441e39c4d838ec6267eb52b91c7849
+Author: JacobNicLarsen <JacobNicLarse@gmail.com>
+Date:   Mon Sep 3 18:06:46 2018 +0200
+
+    Oppgave 2 fikeset
+
+commit e9a99994f6ac396688a1fa6c57848559ac161427
+Author: JacobNicLarsen <JacobNicLarse@gmail.com>
+Date:   Mon Sep 3 17:46:55 2018 +0200
+
+    Del 1 av oppgave 2 fikset
+
+commit 3f4a4f1e865f460a86e3cc9039d27cc9ccb85c98
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 3 17:00:32 2018 +0200
+
+    jobber med bug oppgave 2
+
+commit ca00a0ceb46780e98eb511cf40b7ca07c0a8cb30
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 3 16:33:00 2018 +0200
+
+    Workspace.xml
+
+commit 25249488b539a5bac77341ecd095d9a7f6fde4b5
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 3 14:47:26 2018 +0200
+
+    Oppgave 2 nesten ferdig
+
+commit 592e6a245d534e636717b8aaeb52ccdc5bd112de
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 3 14:10:01 2018 +0200
+
+    Oppgave 1 ferdig
+
+
+    Workspace.xml
+
+commit 25249488b539a5bac77341ecd095d9a7f6fde4b5
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 3 14:47:26 2018 +0200
+
+    Oppgave 2 nesten ferdig
+
+commit 592e6a245d534e636717b8aaeb52ccdc5bd112de
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 3 14:10:01 2018 +0200
+
+    Oppgave 1 ferdig
+
+commit 135076867a44f8f4f41b9490f8af0b3bd0aab95f
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 3 13:57:26 2018 +0200
+
+    Oppgave 1 forste del ferdig
+
+commit 3df4d5a79d8f442357ecdf34f891ccc918e21b58
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 3 12:39:01 2018 +0200
+
+    .idea/workspace.xml added
+
+commit 66d603c3610d1f104b0eec45e18c59eaa07fa5b6
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 3 12:37:55 2018 +0200
+
+    La til klassen Oblig1
+
+commit db082185e6e394336da369d70469fbe28f600e6b
+Author: Jacob Larsen <jacobniclarsen@gmail.com>
+Date:   Mon Sep 3 12:32:12 2018 +0200
+
+    First commit
